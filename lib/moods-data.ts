@@ -1,13 +1,13 @@
 export const moods = [
-  { id: "stressed", name: "Stressed", emoji: "😰" },
-  { id: "anxious", name: "Anxious", emoji: "😟" },
-  { id: "tired", name: "Tired", emoji: "😴" },
-  { id: "sad", name: "Sad", emoji: "😢" },
-  { id: "bored", name: "Bored", emoji: "😑" },
-  { id: "happy", name: "Happy", emoji: "😊" },
+  { id: "stressed", name: "Stres", emoji: "😰" },
+  { id: "anxious", name: "Cemas", emoji: "😟" },
+  { id: "tired", name: "Lelah", emoji: "😴" },
+  { id: "sad", name: "Sedih", emoji: "😢" },
+  { id: "bored", name: "Bosan", emoji: "😑" },
+  { id: "happy", name: "Bahagia", emoji: "😊" },
   { id: "overthinking", name: "Overthinking", emoji: "🤔" },
-  { id: "low-appetite", name: "Low Appetite", emoji: "🍽️" },
-  { id: "craving", name: "Craving", emoji: "🍫" },
+  { id: "low-appetite", name: "Tidak Lapar", emoji: "🍽️" },
+  { id: "craving", name: "Mengidam", emoji: "🍫" },
 ]
 
 export const moodDetails = {

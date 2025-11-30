@@ -16,10 +16,10 @@ export default function MoodSelection({ onMoodSelected, onNavigate }: MoodSelect
         {/* Header */}
         <div className="mb-8 md:mb-12 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4 text-balance">
-            How are you feeling today?
+            Bagaimana perasaan Anda hari ini?
           </h1>
           <p className="text-base md:text-lg text-muted-foreground">
-            Choose the mood that best describes how you're feeling right now
+            Pilih mood yang paling menggambarkan perasaan Anda sekarang
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export default function MoodSelection({ onMoodSelected, onNavigate }: MoodSelect
         <div className="flex justify-center animate-page-scale-in" style={{ animationDelay: '0.6s' }}>
           <Button variant="outline" onClick={() => onNavigate("home")} className="gap-2 hover:bg-muted hover:brightness-110 hover:shadow-lg transition-all duration-200">
             <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
-            <span className="text-sm md:text-base">Go Back</span>
+            <span className="text-sm md:text-base">Kembali</span>
           </Button>
         </div>
       </div>

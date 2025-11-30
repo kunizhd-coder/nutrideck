@@ -302,6 +302,26 @@ html {
     animation: bounce-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   }
 
+  /* Splash animation */
+  @keyframes splash-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.75) translateY(8px);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.05) translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .animate-splash-in {
+    animation: splash-in 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
   /* Staggered animations for list items */
   .animate-stagger {
     animation: page-slide-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;

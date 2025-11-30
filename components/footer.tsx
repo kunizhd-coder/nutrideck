@@ -39,20 +39,18 @@ export default function Footer() {
             {/* Brand Section */}
             <div className="animate-slide-in-left" style={{ animationDelay: "0.1s" }}>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">N</span>
-                </div>
+                <img src="/logo.png" alt="NutriMood" className="w-8 h-8 object-contain" />
                 <h3 className="text-lg font-bold text-foreground">NutriMood</h3>
               </div>
-              <p className="text-sm text-muted-foreground">Your Mood, Your Food.</p>
+              <p className="text-sm text-muted-foreground">Mood Anda, Makanan Anda.</p>
               <p className="text-xs text-muted-foreground mt-2">
-                Discover personalized food recommendations tailored to how you're feeling.
+                Temukan rekomendasi makanan yang dipersonalisasi berdasarkan mood Anda.
               </p>
             </div>
 
             {/* Credit Section */}
             <div className="animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
-              <h4 className="text-sm font-semibold text-foreground mb-3">Developer Credit</h4>
+              <h4 className="text-sm font-semibold text-foreground mb-3">Kredit Pengembang</h4>
               <div className="text-sm text-muted-foreground space-y-1">
                 <p>
                   <span className="font-medium text-foreground">Kuni Zahidah Afifah Billah</span>
@@ -68,8 +66,8 @@ export default function Footer() {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground animate-page-enter" style={{ animationDelay: "0.3s" }}>
-            <p>&copy; 2025 NutriMood. All rights reserved.</p>
-            <p>Made with care for your wellbeing</p>
+            <p>&copy; 2025 NutriMood. Semua hak dilindungi.</p>
+            <p>Dibuat dengan peduli untuk kesejahteraan Anda</p>
           </div>
         </div>
       </footer>

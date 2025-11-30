@@ -21,7 +21,7 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
   const details = moodDetails[mood as keyof typeof moodDetails]
 
   if (!moodData || !details) {
-    return <div>Mood not found</div>
+    return <div>Mood tidak ditemukan</div>
   }
 
   const handleSave = () => {
@@ -36,13 +36,13 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
         {/* Header with Mood */}
         <div className="text-center mb-8 md:mb-12 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
           <div className="inline-block text-6xl md:text-8xl mb-4 md:mb-6 animate-bounce-in" style={{ animationDelay: '0.2s' }}>{moodData.emoji}</div>
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-2">You're feeling {moodData.name}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-2">Anda merasa {moodData.name}</h1>
           <p className="text-base md:text-lg text-muted-foreground">{details.explanation}</p>
         </div>
 
         {isSaved && (
           <div className="mb-6 p-4 bg-accent/20 border border-accent text-accent-foreground rounded-lg text-center font-semibold animate-page-scale-in">
-            Mood saved to history!
+            Mood berhasil disimpan ke riwayat!
           </div>
         )}
 
@@ -50,7 +50,7 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
         <div className="mb-8 md:mb-12 animate-slide-in-right" style={{ animationDelay: '0.3s' }}>
           <div className="flex items-center gap-2 mb-4 md:mb-6">
             <Utensils className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Recommended Foods</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">Makanan yang Direkomendasikan</h2>
           </div>
 
           <div className="space-y-3 md:space-y-4">
@@ -73,9 +73,9 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
               <div className="flex items-center gap-3 md:gap-4">
                 <Lightbulb className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0" />
                 <div className="text-left">
-                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">1-Minute Wellness Ritual</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Ritual Kesehatan 1 Menit</h3>
                   <p className="text-sm md:text-base text-muted-foreground">
-                    {showRitual ? "Click to hide" : "Click to reveal"}
+                    {showRitual ? "Klik untuk sembunyikan" : "Klik untuk tampilkan"}
                   </p>
                 </div>
               </div>
@@ -94,8 +94,8 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
           <div className="flex items-start gap-3 md:gap-4">
             <Heart className="w-5 h-5 md:w-6 md:h-6 text-accent flex-shrink-0 mt-1" />
             <div>
-              <p className="text-base md:text-lg font-semibold text-foreground mb-2">Your Affirmation for Today</p>
-              <p className="text-sm md:text-base text-foreground italic">"{details.affirmation}"</p>
+              <p className="text-base md:text-lg font-semibold text-foreground mb-2">Afirmasi Anda untuk Hari Ini</p>
+              <p className="text-sm md:text-base text-foreground italic">\"{details.affirmation}\"</p>
             </div>
           </div>
         </Card>
@@ -104,15 +104,15 @@ export default function MoodResult({ mood, onBackToSelection, onBackToHome, onSa
         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
           <Button onClick={handleSave} className="gap-2 bg-accent text-accent-foreground hover:bg-accent hover:brightness-110 text-sm md:text-base lg:text-lg px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 hover:shadow-lg transition-all duration-200">
             <Save className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-            <span>Save to History</span>
+            <span>Simpan ke Riwayat</span>
           </Button>
           <Button onClick={onBackToSelection} variant="outline" className="gap-2 bg-transparent text-sm md:text-base lg:text-lg px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 hover:bg-muted hover:brightness-110 hover:shadow-lg transition-all duration-200">
             <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-            <span>Choose Another Mood</span>
+            <span>Pilih Mood Lain</span>
           </Button>
           <Button onClick={onBackToHome} variant="outline" className="gap-2 bg-transparent text-sm md:text-base lg:text-lg px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4 hover:bg-muted hover:brightness-110 hover:shadow-lg transition-all duration-200">
             <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
-            <span>Back to Home</span>
+            <span>Kembali ke Beranda</span>
           </Button>
         </div>
       </div>

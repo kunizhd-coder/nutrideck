@@ -12,9 +12,9 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "history", label: "History", icon: History },
-    { id: "journal", label: "Journal", icon: BookOpen },
+    { id: "home", label: "Beranda", icon: Home },
+    { id: "history", label: "Riwayat", icon: History },
+    { id: "journal", label: "Jurnal", icon: BookOpen },
   ]
 
   return (
@@ -48,9 +48,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
       <nav className="hidden md:block fixed top-0 left-0 right-0 bg-card border-b border-border z-50">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <span className="text-white text-sm font-bold">N</span>
-            </div>
+            <img src="/logo.png" alt="NutriMood" className="w-8 h-8 object-contain" />
             <h1 className="text-xl font-bold text-foreground">NutriMood Deck</h1>
           </div>
 

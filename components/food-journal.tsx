@@ -55,33 +55,33 @@ export default function FoodJournal() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-8 md:mb-12 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
-          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">Food Journal</h1>
-          <p className="text-base md:text-lg text-muted-foreground">Track your meals and how they make you feel</p>
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-2 md:mb-4">Jurnal Makanan</h1>
+          <p className="text-base md:text-lg text-muted-foreground">Lacak makanan Anda dan bagaimana perasaan Anda setelahnya</p>
         </div>
 
         {/* Add New Entry Button */}
         {!isAdding && (
           <Button onClick={() => setIsAdding(true)} size="lg" className="mb-8 md:mb-12 gap-2 bg-primary text-primary-foreground hover:bg-primary hover:brightness-110 hover:shadow-lg transition-all duration-200">
             <Plus className="w-4 h-4 md:w-5 md:h-5" />
-            <span>New Entry</span>
+            <span>Entri Baru</span>
           </Button>
         )}
 
         {/* Add New Entry Form */}
         {isAdding && (
           <Card className="p-6 md:p-8 mb-8 md:mb-12 bg-secondary/5 border-secondary/30">
-            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">Add Journal Entry</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6">Tambah Entri Jurnal</h2>
             <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
               <div>
                 <label className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                  How were you feeling?
+                  Bagaimana perasaan Anda?
                 </label>
                 <select
                   value={formData.mood}
                   onChange={(e) => setFormData({ ...formData, mood: e.target.value })}
                   className="w-full px-4 py-2 md:py-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary text-foreground"
                 >
-                  <option value="">Select a mood...</option>
+                  <option value="">Pilih mood...</option>
                   {moods.map((mood) => (
                     <option key={mood.id} value={mood.id}>
                       {mood.emoji} {mood.name}
@@ -92,25 +92,25 @@ export default function FoodJournal() {
 
               <div>
                 <label className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                  What did you eat?
+                  Apa yang Anda makan?
                 </label>
                 <input
                   type="text"
                   value={formData.food}
                   onChange={(e) => setFormData({ ...formData, food: e.target.value })}
-                  placeholder="e.g., Grilled chicken with salad"
+                  placeholder="mis., Ayam panggang dengan salad"
                   className="w-full px-4 py-2 md:py-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground"
                 />
               </div>
 
               <div>
                 <label className="block text-sm md:text-base font-semibold text-foreground mb-2">
-                  Notes (optional)
+                  Catatan (opsional)
                 </label>
                 <textarea
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="How did it make you feel?"
+                  placeholder="Bagaimana perasaan Anda setelahnya?"
                   rows={4}
                   className="w-full px-4 py-2 md:py-3 rounded-lg bg-input border border-border focus:outline-none focus:ring-2 focus:ring-primary text-foreground placeholder:text-muted-foreground resize-none"
                 />
@@ -118,7 +118,7 @@ export default function FoodJournal() {
 
               <div className="flex gap-3 md:gap-4">
                 <Button type="submit" size="lg" className="flex-1 bg-accent text-accent-foreground hover:bg-accent hover:brightness-110 hover:shadow-lg transition-all duration-200">
-                  Save Entry
+                  Simpan Entri
                 </Button>
                 <Button
                   type="button"
@@ -127,7 +127,7 @@ export default function FoodJournal() {
                   onClick={() => setIsAdding(false)}
                   className="flex-1 bg-transparent hover:bg-muted hover:brightness-110 hover:shadow-lg transition-all duration-200"
                 >
-                  Cancel
+                  Batal
                 </Button>
               </div>
             </form>
@@ -137,8 +137,8 @@ export default function FoodJournal() {
         {/* Entries List */}
         {entries.length === 0 ? (
           <Card className="p-8 md:p-12 text-center">
-            <p className="text-lg text-muted-foreground mb-4">No journal entries yet</p>
-            <p className="text-sm text-muted-foreground">Start tracking your meals to build awareness</p>
+            <p className="text-lg text-muted-foreground mb-4">Belum ada entri jurnal</p>
+            <p className="text-sm text-muted-foreground">Mulai lacak makanan Anda untuk meningkatkan kesadaran</p>
           </Card>
         ) : (
           <div className="space-y-3 md:space-y-4">
@@ -171,6 +171,7 @@ export default function FoodJournal() {
                     <button
                       onClick={() => handleDelete(entry.id)}
                       className="flex-shrink-0 p-2 md:p-3 rounded-lg hover:bg-destructive/20 text-destructive transition-all duration-200 hover:shadow-md active:scale-95"
+                      title="Hapus entri"
                     >
                       <Trash2 className="w-4 h-4 md:w-5 md:h-5 lg:w-6 lg:h-6" />
                     </button>
