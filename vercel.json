@@ -4,17 +4,12 @@
   "env": {
     "NEXT_PUBLIC_VERCEL": "true"
   },
-  "functions": {
-    "api/**/*.ts": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
+  
   "redirects": [],
   "rewrites": [],
-  "headers": [
+   "headers": [
     {
-      "source": "/favicon.svg",
+      "source": "/favicon.ico",
       "headers": [
         {
           "key": "Cache-Control",
@@ -22,20 +17,7 @@
         },
         {
           "key": "Content-Type",
-          "value": "image/svg+xml"
-        }
-      ]
-    },
-    {
-      "source": "/apple-icon.svg",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        },
-        {
-          "key": "Content-Type",
-          "value": "image/svg+xml"
+          "value": "image/x-icon"
         }
       ]
     }
